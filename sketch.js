@@ -4,6 +4,10 @@ function setup () {
 
     startGame();
 
+    p1Score = 0;
+    p2Score = 0;
+    p3Score = 0;
+
 }
 
 function draw () {
@@ -22,12 +26,14 @@ function draw () {
 
     wallCollision();
 
+    displayScore();
+    checkWin();
+
+    checkIfRoundEnd();
+
     if(keyDown(84)) {
-        clear();
-//Make a delay
-allSprites.removeSprites();
-startGame();
-}
+        resetRound();
+    }
 
 }
 
@@ -71,4 +77,11 @@ function startGame() {
     reloadTimeP2 = 0;
     reloadTimeP3 = 0;
 
+}
+
+function resetRound() {
+    clear();
+    //Make a delay
+    allSprites.removeSprites();
+    startGame();
 }

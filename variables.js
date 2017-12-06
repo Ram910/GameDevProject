@@ -3,6 +3,11 @@ var player1;
 var player2;
 var player3;
 var players;
+var playersAlive = 3;
+
+var p1Score;
+var p2Score;
+var p3Score;
 
 var bulletsP1;
 var bulletsP2;
@@ -22,42 +27,28 @@ var canvasWidth = 1280;
 var canvasHeight = 720;
 
 var p1Stats = {
-    rotX: 90,
-    ySpd: 0,
-    isAlive: true,
-    color: 0
+    score: 0
 };
 
 var p2Stats = {
-    rotX : 90,
-    ySpd : 0,
-    isAlive: true,
-    color: 0
+    score: 0
 };
 
 var p3Stats = {
-    rotX : 90,
-    ySpd: 0,
-    isAlive: true,
-    color: 0
+    score: 0
 };
 
-var bulletStats = {
-    spd: 5,
-    size: 3
-};
+var bulletStats = {};
 
-
-var stats = {
-    spd : 4,
-    size: 40
-};
+var stats = {};
 
 
 function initVariables() {
 
     canvasWidth = 1280;
     canvasHeight = 720;
+
+    playersAlive = 3;
 
     p1Stats = {
        rotX: 90,

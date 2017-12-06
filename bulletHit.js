@@ -34,20 +34,20 @@ function playerHit(player, bullet) {
     if (player == "player1") {
         player1.remove();
         p1Stats.isAlive = false;
+        playersAlive -= 1;
         bullet[0].life = 0;
-        //bullets.remove();
-        print("It collied");
     }
     else if(player == "player2") {
         player2.remove();
         p2Stats.isAlive = false;
+        playersAlive -= 1;
         bullet[0].life = 0;
        // bullets.remove();
     }
     else if(player == "player3") {
         player3.remove();
         p3Stats.isAlive = false;
+        playersAlive -= 1;
         bullet[0].life = 0;
-        //bullets.remove();
     }
 }
