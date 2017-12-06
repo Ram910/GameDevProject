@@ -52,3 +52,45 @@ var stats = {
     spd : 4,
     size: 40
 };
+
+
+function initVariables() {
+
+    canvasWidth = 1280;
+    canvasHeight = 720;
+
+    p1Stats = {
+       rotX: 90,
+       ySpd: 0,
+       isAlive: true,
+       color: 0
+    };
+
+    p2Stats = {
+       rotX : 90,
+       ySpd : 0,
+       isAlive: true,
+       color: 0
+    };
+
+    p3Stats = {
+       rotX : 90,
+       ySpd: 0,
+       isAlive: true,
+       color: 0
+    };
+
+    bulletStats = {
+       spd: 5,
+       size: 3
+    };
+
+
+    stats = {
+       spd : 4,
+       size: 40
+    };
+}
+
+
+

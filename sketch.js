@@ -24,46 +24,16 @@ function draw () {
 
     if(keyDown(84)) {
         clear();
-        //Make a delay
-        allSprites.removeSprites();
-        startGame();
-    }
+//Make a delay
+allSprites.removeSprites();
+startGame();
+}
 
 }
 
 function startGame() {
 
-        var p1Stats = {
-            rotX: 90,
-            ySpd: 0,
-            isAlive: true,
-            color: 0
-        };
-
-        var p2Stats = {
-            rotX : 90,
-            ySpd : 0,
-            isAlive: true,
-            color: 0
-        };
-
-        var p3Stats = {
-            rotX : 90,
-            ySpd: 0,
-            isAlive: true,
-            color: 0
-        };
-
-        var bulletStats = {
-            spd: 5,
-            size: 3
-        };
-
-
-        var stats = {
-            spd : 4,
-            size: 40
-        };
+    initVariables();
 
     p1Stats.color = color(255, 0, 0);
     p2Stats.color = color(255, 0, 255);
