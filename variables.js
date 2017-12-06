@@ -72,7 +72,7 @@ function initVariables() {
     };
 
     bulletStats = {
-       spd: 5,
+       spd: 7,
        size: 3
     };
 
