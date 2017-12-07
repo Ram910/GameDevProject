@@ -9,6 +9,8 @@ var p1Score;
 var p2Score;
 var p3Score;
 
+var gameOver = false;
+
 var bulletsP1;
 var bulletsP2;
 var bulletsP3;

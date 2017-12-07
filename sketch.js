@@ -14,6 +14,9 @@ function draw () {
     background(110, 190, 255);
     drawSprites();
 
+    displayScore();
+    checkWin();
+
     movePlayer1();
     movePlayer2();
     movePlayer3();
@@ -26,8 +29,8 @@ function draw () {
 
     wallCollision();
 
-    displayScore();
-    checkWin();
+
+
 
     checkIfRoundEnd();
 

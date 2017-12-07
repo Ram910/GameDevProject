@@ -2,6 +2,10 @@
 function movePlayer1() {
 
 
+    if(gameOver)
+    {
+        return;
+    }
 
     if (!keyDown("w") && !keyDown("s")) {
         p1Stats.ySpd = 0;
@@ -34,6 +38,12 @@ function movePlayer1() {
 }
 
 function movePlayer2() {
+
+    if(gameOver)
+    {
+        return;
+    }
+
     if (!keyDown(104) && !keyDown(101)) {
         p2Stats.ySpd = 0;
     }
@@ -62,6 +72,12 @@ function movePlayer2() {
 }
 
 function movePlayer3() {
+
+    if(gameOver)
+    {
+        return;
+    }
+
     if (!keyDown(38) && !keyDown(40)) {
         p3Stats.ySpd = 0;
     }
