@@ -1,6 +1,6 @@
 function p1Shoot() {
 
-    if(keyDown("e") && p1Stats.isAlive == true) {
+    if(keyDown("r") && p1Stats.isAlive == true) {
         if(millis() >= reloadTimeP1) {
             var bulletP1 = createSprite(player1.position.x, player1.position.y, bulletStats.size, bulletStats.size);
             bulletP1.shapeColor = p1Stats.color;
@@ -32,7 +32,7 @@ function p2Shoot() {
 
 function p3Shoot() {
 
-    if(keyDown(96) && p3Stats.isAlive) {
+    if(keyDown(190) && p3Stats.isAlive) {
         if(millis() >= reloadTimeP3) {
             var bulletP3 = createSprite(player3.position.x, player3.position.y, bulletStats.size, bulletStats.size);
             bulletP3.shapeColor = p3Stats.color;

@@ -78,6 +78,7 @@ function movePlayer3() {
         return;
     }
 
+
     if (!keyDown(38) && !keyDown(40)) {
         p3Stats.ySpd = 0;
     }
