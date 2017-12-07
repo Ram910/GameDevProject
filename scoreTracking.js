@@ -1,14 +1,14 @@
 function displayScore() {
-    text("Score:", 50, 40);
+    text("Score:", 40, 30);
 
-    image(p1Stats.p1Img, 100, 25, 20, 20);
-    text("" + p1Score, 125, 40);
+    image(p1Stats.p1Img, 90, 15, 20, 20);
+    text("" + p1Score, 115, 30);
 
-     image(p3Stats.p3Img, 175, 25, 20, 20);
-     text("" + p3Score, 200, 40);
+     image(p3Stats.p3Img, 165, 15, 20, 20);
+     text("" + p3Score, 190, 30);
 
-     image(p2Stats.p2Img, 250, 25, 20, 20);
-     text("" + p2Score, 275, 40);
+     image(p2Stats.p2Img, 240, 15, 20, 20);
+     text("" + p2Score, 265, 30);
 
 }
 
@@ -30,5 +30,19 @@ function checkWin() {
         textSize(40);
         text("Player 3 wins!", width/2, height/2);
         gameOver = true;
+    }
+    if(gameOver) {
+        textSize(20);
+        text("Press Space for new game", width/2, height/2 + 30);
+    }
+
+}
+
+function newGame() {
+    if(gameOver) {
+        if(keyDown(32)) {
+            resetRound();
+            resetScore();
+        }
     }
 }

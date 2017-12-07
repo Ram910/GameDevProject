@@ -15,6 +15,7 @@ function draw () {
     drawSprites();
 
     displayScore();
+    newGame();
     checkWin();
 
     movePlayer1();
@@ -28,9 +29,6 @@ function draw () {
     bulletCollision();
 
     wallCollision();
-
-
-
 
     checkIfRoundEnd();
 

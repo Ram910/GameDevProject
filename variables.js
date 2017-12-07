@@ -85,5 +85,12 @@ function initVariables() {
     };
 }
 
+function resetScore() {
+    p1Score = 0;
+    p2Score = 0;
+    p3Score = 0;
+    gameOver = false;
+}
+
 
 

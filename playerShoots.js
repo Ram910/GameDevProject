@@ -1,6 +1,6 @@
 function p1Shoot() {
 
-    if(keyDown("r") && p1Stats.isAlive == true) {
+    if(keyDown("r") && p1Stats.isAlive) {
         if(millis() >= reloadTimeP1) {
             var bulletP1 = createSprite(player1.position.x, player1.position.y, bulletStats.size, bulletStats.size);
             bulletP1.shapeColor = p1Stats.color;

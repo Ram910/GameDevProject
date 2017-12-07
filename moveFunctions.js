@@ -1,11 +1,11 @@
 
 function movePlayer1() {
 
-
     if(gameOver)
     {
         return;
     }
+
 
     if (!keyDown("w") && !keyDown("s")) {
         p1Stats.ySpd = 0;
@@ -24,7 +24,6 @@ function movePlayer1() {
    if(keyDown("a")) {
         p1Stats.rotX += -stats.spd;
         player1.rotation += -stats.spd;
-
     }
     if(keyDown("d")) {
         p1Stats.rotX += stats.spd;
@@ -32,9 +31,6 @@ function movePlayer1() {
     }
 
     player1.setSpeed(p1Stats.ySpd, p1Stats.rotX);
-
-
-
 }
 
 function movePlayer2() {
@@ -43,6 +39,7 @@ function movePlayer2() {
     {
         return;
     }
+
 
     if (!keyDown(104) && !keyDown(101)) {
         p2Stats.ySpd = 0;
