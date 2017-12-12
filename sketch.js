@@ -26,6 +26,8 @@ function draw () {
     p2Shoot();
     p3Shoot();
 
+
+
     bulletCollision();
 
     wallCollision();
@@ -41,6 +43,7 @@ function draw () {
 function startGame() {
 
     initVariables();
+
 
     p1Stats.color = color(255, 0, 0);
     p2Stats.color = color(255, 0, 255);
@@ -72,6 +75,8 @@ function startGame() {
 
     walls = new Group();
     drawWalls();
+    level1();
+
 
 
     reloadTimeP1 = 0;
