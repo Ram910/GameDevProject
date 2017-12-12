@@ -66,22 +66,22 @@ function drawEmojis(sprite) {
     var spriteW = sprite.width;
     var spriteH = sprite.height;
 
-    var spriteX = sprite.position.x - spriteW/2;
-    var spriteY = sprite.position.y - spriteH/2;
+    var spriteX = sprite.position.x - spriteW/2; //Set initial X-pos for the sprites
+    var spriteY = sprite.position.y - spriteH/2; //Set initial Y-pos for the sprites
 
-    var wallW = 50;
-    var wallH = 50;
+    var wallW = 50; //Sprite width
+    var wallH = 50; //Sprite height
 
-    var emojiW = spriteW/wallW;
-    var emojiH = spriteH/wallH;
+    var emojiW = spriteW/wallW; //Calculate how many emojis on the X-axis
+    var emojiH = spriteH/wallH; //Calculate how many emojis on the Y-axis
 
     for(var i = 0; i < emojiW; i++) {
         for(var j = 0; j < emojiH; j++) {
-            var emojiX = spriteX + wallW * i + 25;
-            var emojiY = spriteY + wallH * j + 25;
-            var levelWall = createSprite(emojiX, emojiY);
-            levelWall.addImage(loadImage("assets/wallEmoji.png"));
-            walls.add(levelWall);
+            var emojiX = spriteX + wallW * i + 25; //Set X-pos
+            var emojiY = spriteY + wallH * j + 25; //Set Y-Pos
+            var levelWall = createSprite(emojiX, emojiY); //Create the sprite
+            levelWall.addImage(loadImage("assets/wallEmoji.png")); //Give sprite emoji image
+            walls.add(levelWall); //Add sprite to walls group for collision detection
         }
     }
 
