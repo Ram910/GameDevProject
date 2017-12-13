@@ -75,7 +75,7 @@ function startGame() {
 
     walls = new Group();
     drawWalls();
-    level1();
+    level2();
 
 
 

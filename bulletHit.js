@@ -28,6 +28,18 @@ function bulletCollision() {
         }
     }
 
+    if(bulletsP1.overlap(walls)) {
+        wallHit(bulletsP1);
+    }
+
+    if(bulletsP2.overlap(walls)) {
+        wallHit(bulletsP2);
+    }
+
+    if(bulletsP3.overlap(walls)) {
+        wallHit(bulletsP3);
+    }
+
 }
 
 function playerHit(player, bullet) {
@@ -50,4 +62,8 @@ function playerHit(player, bullet) {
         playersAlive -= 1;
         bullet[0].life = 0;
     }
+}
+
+function wallHit(bullet) {
+    bullet[0].life = 0;
 }
