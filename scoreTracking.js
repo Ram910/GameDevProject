@@ -23,14 +23,14 @@ function checkWin() {
     else if(p3Score == 5) {
         textAlign(CENTER, [CENTER]);
         textSize(40);
-        image(p2Stats.p2Img, width/2 - 85, height/2 - 50);
+        image(p3Stats.p3Img, width/2 - 85, height/2 - 50);
         text("Wins!", width/2 + 30, height/2);
         gameOver = true;
     }
     else if(p2Score == 5) {
         textAlign(CENTER, [CENTER]);
         textSize(40);
-        image(p3Stats.p3Img, width/2 - 85, height/2 - 50);
+        image(p2Stats.p2Img, width/2 - 85, height/2 - 50);
         text("Wins!", width/2 + 30, height/2);
         gameOver = true;
     }
