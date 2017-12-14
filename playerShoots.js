@@ -1,9 +1,10 @@
+
+//Functions for players to be able to shoot
 function p1Shoot() {
 
     if(keyDown("r") && p1Stats.isAlive) {
         if(millis() >= reloadTimeP1) {
             var bulletP1 = createSprite(player1.position.x, player1.position.y, bulletStats.size, bulletStats.size);
-            //bulletP1.shapeColor = p1Stats.color;
             bulletP1.addImage(p1Stats.p1Img);
             bulletP1.scale = 0.1;
             bulletP1.setSpeed(bulletStats.spd , player1.rotation - 90);

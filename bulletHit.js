@@ -1,3 +1,5 @@
+
+//Checks if players are hit or bullet hits wall
 function bulletCollision() {
 
     if(player1.overlap(bulletsP2) || player1.overlap(bulletsP3)) {
@@ -42,6 +44,7 @@ function bulletCollision() {
 
 }
 
+//Causes players to die when hit
 function playerHit(player, bullet) {
     if (player == "player1") {
         player1.remove();
@@ -64,6 +67,7 @@ function playerHit(player, bullet) {
     }
 }
 
+//Bullet removal upon wall collision
 function wallHit(bullet) {
     bullet[0].life = 0;
 }

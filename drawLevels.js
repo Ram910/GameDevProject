@@ -1,3 +1,5 @@
+
+
 function level1() {
 
     //Array of objects for rectangle positions
@@ -19,6 +21,7 @@ function level1() {
         drawEmojis((rectangle));
     }
 
+    //Set initial player positions
     player1.position.x = 640;
     player1.position.y = 43;
 
@@ -27,6 +30,8 @@ function level1() {
 
     player3.position.x = 74;
     player3.position.y = 654;
+    //Set next level
+    level = 2;
 
 
 }
@@ -49,12 +54,13 @@ function level2() {
     ]
 
     //For loop to draw emojis over all the rectangles.
-    for(var i = 0; i < rects.length; i++) {
+    for (var i = 0; i < rects.length; i++) {
         var rectangle = createSprite(rects[i].x, rects[i].y, rects[i].w, rects[i].h);
         rectangle.shapeColor = color(110, 190, 255);
         drawEmojis((rectangle));
     }
 
+    //Set initial player positions
     player1.position.x = 640;
     player1.position.y = 53;
 
@@ -63,14 +69,18 @@ function level2() {
 
     player3.position.x = 74;
     player3.position.y = 614;
-}
 
-function level3() {
-
+    //Set next level
+    level = 1;
 }
 
 function levelSwitch() {
 
+    if(level == 1) {
+        level1();
+    } else if(level == 2) {
+        level2();
+    }
 }
 
 function drawEmojis(sprite) {

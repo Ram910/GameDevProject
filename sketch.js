@@ -1,8 +1,8 @@
 
 function setup () {
     createCanvas(canvasWidth, canvasHeight);
-
     startGame();
+    level1();
 
     p1Score = 0;
     p2Score = 0;
@@ -34,25 +34,26 @@ function draw () {
 
     checkIfRoundEnd();
 
-    if(keyDown(84)) {
+    if(keyDown(27)) {
+        p1Score = 0;
+        p2Score = 0;
+        p3Score = 0;
         resetRound();
     }
 
 }
 
+//Start game/Round
 function startGame() {
 
     initVariables();
 
-
-    p1Stats.color = color(255, 0, 0);
-    p2Stats.color = color(255, 0, 255);
-    p3Stats.color = color(0, 0, 255);
-
+    //Adds player images to player objects
     p1Stats.p1Img = loadImage('assets/appleDevil.png');
     p2Stats.p2Img = loadImage('assets/googleDevil.png');
     p3Stats.p3Img = loadImage('assets/fbDevil.png');
 
+    //Creates player sprites
     player1 = createSprite(width/2, height/2 - 150, stats.size, stats.size);
     player1.addImage(p1Stats.p1Img);
     player1.scale = 0.6;
@@ -69,15 +70,13 @@ function startGame() {
     players.add(player2);
     players.add(player3);
 
+    //Bullet groups
     bulletsP1 = new Group();
     bulletsP2 = new Group();
     bulletsP3 = new Group();
-
+    //Wall groups and drawing walls
     walls = new Group();
     drawWalls();
-    level2();
-
-
 
     reloadTimeP1 = 0;
     reloadTimeP2 = 0;
@@ -90,4 +89,5 @@ function resetRound() {
     //Make a delay
     allSprites.removeSprites();
     startGame();
+    levelSwitch();
 }

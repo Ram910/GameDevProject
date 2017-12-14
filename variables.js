@@ -4,6 +4,7 @@ var player2;
 var player3;
 var players;
 var playersAlive = 3;
+var level = 0;
 
 var p1Score;
 var p2Score;
@@ -44,7 +45,7 @@ var bulletStats = {};
 
 var stats = {};
 
-
+//Initialise and reset variables
 function initVariables() {
 
     canvasWidth = 1280;
@@ -85,6 +86,8 @@ function initVariables() {
     };
 }
 
+
+//Reset score for new game
 function resetScore() {
     p1Score = 0;
     p2Score = 0;
